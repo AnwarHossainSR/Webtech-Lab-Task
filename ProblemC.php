@@ -95,10 +95,10 @@ function test_input($data) {
   <br><br>
   <span class="color"><b>Blood Group:</b></span>
   <select name="blood">
-  <option value="b+">B+</option>
-  <option value="a+">A+</option>
-  <option value="ab+">AB+</option>
-  <option value="o+">O+</option>
+  <option value="b+" <?php if (isset($bg) && $bg=="b+") echo "selected";?>>B+</option>
+  <option value="a+" <?php if (isset($bg) && $bg=="a+") echo "selected";?>>A+</option>
+  <option value="ab+" <?php if (isset($bg) && $bg=="ab+") echo "selected";?>>AB+</option>
+  <option value="o+" <?php if (isset($bg) && $bg=="o+") echo "selected";?>>O+</option>
   </select>
   <span class="error">*<?php echo $bloodErr;?></span> 
   <br><br>
