@@ -1,21 +1,24 @@
 <?php
-$pattern = array
-( array(1,2,3,"A"),
-  array(1,2,"B","C"),
-  array(1,"D","E","F"),
-  );
-  
-  echo $pattern[0][0]."".$pattern[0][1]."".$pattern[0][2]."<br>";
-  echo $pattern[1][0]."".$pattern[1][1]."<br>";
-  echo $pattern[2][0]."<br>";
-
+$arr = array(
+    array(1,2,3,"A"),
+    array(1,2,"B","C"),
+    array(1,"D","E","F")
+);
+  for ($row = 0; $row <3; $row++) {
+  for ($col = 0; $col < 3-$row; $col++) {
+      echo $arr[$row][$col];
+  }
   echo "<br>";
-
-
-  echo $pattern[0][3]."<br>";
-  echo $pattern[1][2]."".$pattern[1][3]."<br>";
-  echo $pattern[2][1]."".$pattern[2][2]."".$pattern[2][3]."<br>";
+}
+echo "<br>";
+echo "<br>"; 
+$x=3;
+for ($row = 0; $row <3; $row++) {
+  for ($col = $x; $col <4 ; $col++) {
+      echo $arr[$row][$col];
+  }
+  $x--;
+  echo "<br>";
+}
 
 ?>
-
-
